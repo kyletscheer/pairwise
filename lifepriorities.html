@@ -1,108 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5RH4RTH9CN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en" data-bs-theme="light">
 
-  gtag('config', 'G-5RH4RTH9CN');
-</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <title>Ranking Life Priorities</title>
-    <!-- Add Bootstrap CSS link -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Add Bootstrap JavaScript link (jQuery and Popper.js are required by Bootstrap) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking Life Priorities</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
 
-    <style>
-      .item {
-        margin-bottom: 10px;
-      }
-
-      .confidence {
-        font-size: 12px;
-        color: #888;
-      }
-
-      .content {
-        margin: 100px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Elo Ranking Generator</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Elo Ranking Generator</a>
+      <div class="navbar-actions">
+        <div class="theme-toggle" id="themeToggle" role="button" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill"></i>
+        </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="lifepriorities.html"
-                >Ranking Life Priorities</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
-    <div class="content">
-      <div class="jumbotron mt-4">
-        <h1 class="display-4">Ranking Life Priorities</h1>
-        <p>
-          This site helps you answer the question, "What matters to me?". By
-          using an Elo Ranking system (for chess rankings) you can compare life
-          priorities in pairs, making prioritizing less overwhelming. As you
-          make choices, your priorities will begin to appear, aiding
-          self-reflection and decision-making for a more fulfilling life.
-        </p>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="lifepriorities.html">Ranking Life Priorities</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+      <h1 class="fw-bold">Ranking Life Priorities</h1>
+      <p>
+        This site helps you answer the question, "What matters to me?". By using an Elo Ranking system (for chess rankings) 
+        you can compare life priorities in pairs, making prioritizing less overwhelming. As you make choices, your priorities 
+        will begin to appear, aiding self-reflection and decision-making for a more fulfilling life.
+      </p>
       <div id="content"></div>
       <div id="status"></div>
     </div>
-    <footer class="bg-dark fixed-bottom p-2">
-      <div class="container">
-        <p class="m-0 text-center text-white">
-          &copy;
-          <a href="http://www.kylescheer.com" target="_blank" rel="noopener"
-            >Kyle Scheer</a
-          >
-          <button
-            type="button"
-            class="btn btn-outline-primary"
-            style="margin-left: 20px"
-          >
-            <a
-              href="https://github.com/kyletscheer/pairwise"
-              target="_blank"
-              rel="noopener"
-              >View Code</a
-            >
-          </button>
-        </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-4 mt-auto">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          &copy; <a href="http://www.kylescheer.com" target="_blank" rel="noopener">Kyle Scheer</a>
+        </div>
+        <a href="https://github.com/kyletscheer/pairwise" target="_blank" rel="noopener">View Code</a>
       </div>
-    </footer>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="darkmode.js"></script>
     <script>
       var items = [
         "Family",
@@ -315,9 +277,5 @@
         displayMatchOptions(pair);
       }
     </script>
-    <!-- Add Bootstrap JS and Popper.js scripts (required for Bootstrap components) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
